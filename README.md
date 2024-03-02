@@ -1,2 +1,1 @@
-# 24A10357-Liron-Barsheshet-ex2-207354614
-Android development
+# -24A10357-Liron-Barsheshet-207354614

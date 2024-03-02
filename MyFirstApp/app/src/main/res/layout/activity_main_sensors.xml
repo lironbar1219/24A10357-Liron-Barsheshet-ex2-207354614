@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_200"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/main_LIN_hearts"
+        android:layout_width="140dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="@dimen/margin_default"
+        android:layout_marginTop="@dimen/margin_default"
+        android:orientation="horizontal">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_heart1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/heart" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_heart2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="10dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/heart" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/main_IMG_heart3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/heart" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/main_LIN_score"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="@dimen/margin_default"
+        android:layout_marginTop="@dimen/margin_default"
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal" >
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/main_LBL_score"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="000"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="2dp"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            android:textColor="@color/black" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <RelativeLayout
+        android:id="@+id/main_IMG_matrix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="@dimen/margin_top"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="@dimen/margin_buttom">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/left_col"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_weight="1">
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_pos00"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/stone"
+                android:visibility="invisible" />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_pos10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/stone"
+                android:visibility="invisible" />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_pos20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/stone"
+                android:visibility="invisible" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_pos30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/stone"
+                android:visibility="invisible" />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_pos40"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/stone"
+                android:visibility="invisible" />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_pos50"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/stone"
+                android:visibility="invisible" />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_pos60"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/spaceship"
+                android:visibility="invisible" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/second_left_col"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@id/left_col"
+            android:layout_weight="1">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_pos01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/stone"
+                android:visibility="invisible" />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_pos11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/stone"
+                android:visibility="invisible" />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_pos21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/stone"
+                android:visibility="invisible" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_pos31"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/stone"
+                android:visibility="invisible" />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_pos41"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/stone"
+                android:visibility="invisible" />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_pos51"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/stone"
+                android:visibility="invisible" />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_pos61"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/spaceship"
+                android:visibility="visible" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/third_left_col"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@id/second_left_col"
+            android:layout_weight="1"
+            >
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_pos02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/stone"
+                android:visibility="invisible" />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_pos12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/stone"
+                android:visibility="invisible" />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_pos22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/stone"
+                android:visibility="invisible" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_pos32"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/stone"
+                android:visibility="invisible" />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_pos42"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/stone"
+                android:visibility="invisible" />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_pos52"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/stone"
+                android:visibility="invisible" />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_pos62"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/spaceship"
+                android:visibility="invisible" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/fourth_left_col"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@id/third_left_col"
+            android:layout_weight="1"
+            >
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_pos03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/stone"
+                android:visibility="invisible" />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_pos13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/stone"
+                android:visibility="invisible" />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_pos23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/stone"
+                android:visibility="invisible" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_pos33"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/stone"
+                android:visibility="invisible" />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_pos43"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/stone"
+                android:visibility="invisible" />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_pos53"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/stone"
+                android:visibility="invisible" />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_pos63"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/spaceship"
+                android:visibility="invisible" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@id/fourth_left_col"
+            android:layout_weight="1"
+            >
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_pos04"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/stone"
+                android:visibility="invisible" />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_pos14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/stone"
+                android:visibility="invisible" />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_pos24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/stone"
+                android:visibility="invisible" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_pos34"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/stone"
+                android:visibility="invisible" />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_pos44"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/stone"
+                android:visibility="invisible" />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_pos54"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/stone"
+                android:visibility="invisible" />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/main_IMG_pos64"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/spaceship"
+                android:visibility="invisible" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Views.ScoreFragment">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/score_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Best Players"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+    <!-- Go Back Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/score_btn_go_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go Back"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp" />
+
+    <!-- RecyclerView now has layout_above set to the ID of the Go Back button -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/scores_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/score_title"
+        android:layout_above="@id/score_btn_go_back"
+        android:layout_marginTop="20dp"/>
+
+</RelativeLayout>
